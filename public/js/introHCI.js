@@ -10,4 +10,12 @@ $(document).ready(function() {
  */
 function initializePage() {
 	// your code here
+	${".likeBtn"}.click(sendToAnalystic);
+}
+
+function sendToAnalystic(event){
+	event.preventDefault();
+	console.log("clicked the button");
+	ga('create', 'UA-114568511-1', 'auto');
+	ga("send", "event", "like", "click");
 }
